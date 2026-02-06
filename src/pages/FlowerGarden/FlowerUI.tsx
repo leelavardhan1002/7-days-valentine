@@ -13,12 +13,12 @@ const FlowerUI = ({ onClear, autoBloom, toggleAuto, hideUI }: FlowerUIProps) => 
     <>
       {/* Header */}
       <header className={`flower-header ${hideUI ? 'fade-out' : ''}`}>
-        <h1 className="flower-logo">🌸 A Lovely Garden for You</h1>
+        <h1 className="flower-logo">🌸 A Lovely Rose Garden for You</h1>
       </header>
 
       {/* Instructions */}
       <div className={`flower-name ${hideUI ? 'fade-out' : ''}`}>
-        <span className="text-line">Click Anywhere to</span>
+        <span className="text-line">Click Anywhere to start your Rose Day to</span>
         <span className="text-highlight">Plant Flowers</span>
         <span className="text-line">✨ or turn on Auto Bloom</span>
       </div>
