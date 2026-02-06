@@ -1,0 +1,8 @@
+:root {
+  --glass-group-bg: rgba(255, 255, 255, 0.25);
+  --glass-group-border: rgba(255, 255, 255, 0.3);
+  --glass-group-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  --glass-group-gap: 1rem;
+  --glass-group-padding: 0.5rem;
+  --glass-group-radius: 24px;
+}

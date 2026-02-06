@@ -1,0 +1,44 @@
+.flower-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  z-index: 5;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.flower-name.fade-out {
+  opacity: 0;
+  transform: translate(-50%, -60%);
+  pointer-events: none;
+}
+
+.text-line {
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.2s forwards;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text-highlight {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.4s forwards;
+  white-space: nowrap;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}

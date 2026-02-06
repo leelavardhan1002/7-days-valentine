@@ -1,0 +1,24 @@
+.flower-header {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  pointer-events: none;
+  z-index: 10;
+  transition: var(--transition-fade);
+}
+
+.flower-header.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flower-logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: fadeInDown 1s ease-out 0.5s forwards;
+}

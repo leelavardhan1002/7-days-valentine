@@ -1,0 +1,21 @@
+.flower-controls {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.8s forwards;
+  transition: opacity 0.3s ease;
+}
+
+.flower-controls.fade-out {
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .flower-controls {
+    width: 90%;
+    bottom: 2rem;
+  }
+}
