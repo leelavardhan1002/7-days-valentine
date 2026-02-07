@@ -1,0 +1,17 @@
+.page-footer {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.7rem;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 10;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.page-footer.fade-out {
+  opacity: 0;
+}

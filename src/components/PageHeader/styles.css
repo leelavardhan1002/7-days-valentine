@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap');
+
+.page-header {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 1s ease;
+}
+
+.page-header-left {
+  top: 2rem;
+  left: 2rem;
+}
+
+.page-header-center {
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-header.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: fadeInDown 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -42,7 +42,7 @@ const Landing = () => {
   }, []);
 
   const handleDayClick = (dayNum: number) => {
-    if (dayNum === currentDay) {
+    if (dayNum <= currentDay) {
       navigate(`/day${dayNum}`);
     }
   };
@@ -70,13 +70,13 @@ const Landing = () => {
           return (
             <div
               key={i}
-              className={`day-card ${dayNum !== currentDay ? 'locked' : ''} ${isToday ? 'today' : ''}`}
+              className={`day-card ${dayNum > currentDay ? 'locked' : ''} ${isToday ? 'today' : ''}`}
               onClick={() => handleDayClick(dayNum)}
             >
               <span className="day-emoji">{day.emoji}</span>
               <span className="day-label">{day.label}</span>
-              {dayNum !== currentDay && <span className="lock">🔒</span>}
-              {dayNum !== currentDay && <div className="unlock-hint">Unlocks in {countdown}</div>}
+              {dayNum > currentDay && <span className="lock">🔒</span>}
+              {dayNum > currentDay && <div className="unlock-hint">Unlocks in {countdown}</div>}
             </div>
           );
         })}
