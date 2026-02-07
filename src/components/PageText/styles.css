@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap');
+
+.page-text {
+  position: absolute;
+  text-align: center;
+  pointer-events: none;
+  z-index: 5;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.page-text-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page-text-center-left {
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.page-text-top {
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.page-text-bottom {
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.page-text.fade-out {
+  opacity: 0;
+}
+
+.page-text-center.fade-out {
+  transform: translate(-50%, -60%);
+}
+
+.page-text-center-left.fade-out {
+  transform: translate(-50%, -60%);
+}
+
+.text-line {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.2s forwards;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text-highlight {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.4s forwards;
+  white-space: nowrap;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

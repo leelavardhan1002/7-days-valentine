@@ -1,0 +1,1 @@
+export { PageText } from './PageText';
