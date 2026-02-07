@@ -9,7 +9,6 @@ import {
   type AnimationState,
 } from "./constants";
 import {
-  isRingSpinAnimation,
   setupAnimationAction,
   calculatePauseTime,
   areAllAnimationsFinished,
@@ -94,10 +93,6 @@ const Rose3DBox = () => {
 
           gltf.animations.forEach((clip) => {
             const action = setupAnimationAction(mixer!, clip);
-
-            // if (isRingSpinAnimation(clip)) {
-            //   ringSpinAction = action;
-            // }
 
             actions.push(action);
           });
