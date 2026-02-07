@@ -68,7 +68,6 @@ const Rose3DBox = () => {
     let mixer: THREE.AnimationMixer | null = null;
     let model: THREE.Group | null = null;
     const actions: THREE.AnimationAction[] = [];
-    // let ringSpinAction: THREE.AnimationAction | null = null;
     let canOpen = false;
 
     // Load model
