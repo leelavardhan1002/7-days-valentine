@@ -69,7 +69,7 @@ const Rose3DBox = () => {
     let mixer: THREE.AnimationMixer | null = null;
     let model: THREE.Group | null = null;
     const actions: THREE.AnimationAction[] = [];
-    let ringSpinAction: THREE.AnimationAction | null = null;
+    // let ringSpinAction: THREE.AnimationAction | null = null;
     let canOpen = false;
 
     // Load model
@@ -95,9 +95,9 @@ const Rose3DBox = () => {
           gltf.animations.forEach((clip) => {
             const action = setupAnimationAction(mixer!, clip);
 
-            if (isRingSpinAnimation(clip)) {
-              ringSpinAction = action;
-            }
+            // if (isRingSpinAnimation(clip)) {
+            //   ringSpinAction = action;
+            // }
 
             actions.push(action);
           });
